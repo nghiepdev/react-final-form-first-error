@@ -1,0 +1,40 @@
+{
+  "name": "react-final-form-first-error",
+  "version": "0.1.0",
+  "description": "A plugin get the first error for 🏁 React Final Form",
+  "keywords": [
+    "pagination",
+    "paginate"
+  ],
+  "main": "bundle.js",
+  "files": [
+    "example.css",
+    "LICENCE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c --environment BUILD:production",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/preset-react": "^7.10.1",
+    "rollup": "^2.11.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nghiepit/react-final-form-first-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nghiepit/react-final-form-first-error/issues"
+  },
+  "homepage": "https://github.com/nghiepit/react-final-form-first-error",
+  "author": "Nghiep <me@nghiepit.dev>",
+  "license": "MIT"
+}
