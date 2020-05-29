@@ -4,30 +4,23 @@ import PropTypes from 'prop-types';
 // Inspired by https://github.com/streamich/react-use/blob/master/src/createMemo.ts
 export const createMemo = (fn) => (...args) => useMemo(() => fn(...args), args);
 
-export const useFirstError = createMemo(
-  (errors, modified, submitFailed, pristine) => {
-    if (pristine) {
-      return null;
+export const useFirstError = createMemo((errors, modified, submitFailed) => {
+  for (const [key, value] of Object.entries(errors)) {
+    if (submitFailed || modified[key] === true) {
+      return value;
     }
-
-    for (const [key, value] of Object.entries(errors)) {
-      if (submitFailed || modified[key] === true) {
-        return value;
-      }
-    }
-  },
-);
+  }
+});
 
 export const FormError = ({
   errors,
   modified,
   submitError,
   submitFailed,
-  pristine,
   children,
   render,
 }) => {
-  const firstError = useFirstError(errors, modified, submitFailed, pristine);
+  const firstError = useFirstError(errors, modified, submitFailed);
 
   const error = useMemo(() => {
     return firstError || submitError || null;
@@ -49,7 +42,6 @@ FormError.propTypes = {
   modified: PropTypes.object.isRequired,
   submitFailed: PropTypes.bool.isRequired,
   submitError: PropTypes.string,
-  pristine: PropTypes.bool,
   children: PropTypes.func,
   render: PropTypes.func,
 };
