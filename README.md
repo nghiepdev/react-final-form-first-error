@@ -13,6 +13,8 @@ yarn add react-final-form-first-error
 
 ## Usage
 
+Example: https://codesandbox.io/s/react-final-from-first-error-my39h?file=/index.js
+
 ```jsx
 import {Form, Field} from 'react-final-form';
 import {FormError, useFirstError} from 'react-final-form-first-error';
