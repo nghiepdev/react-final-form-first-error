@@ -9,7 +9,7 @@ module.exports = {
     name: 'react-final-form-first-error',
     globals: {
       react: 'React',
-      'prop-types': 'PropTypes',
+      'react-final-form': 'react-final-form',
     },
   },
   plugins: [
@@ -18,5 +18,5 @@ module.exports = {
       exclude: 'node_modules/**',
     }),
   ],
-  external: ['react', 'prop-types'],
+  external: ['react', 'react-final-form'],
 };
