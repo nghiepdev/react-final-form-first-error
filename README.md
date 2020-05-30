@@ -27,7 +27,6 @@ const LoginForm = (props) => {
       render={(props) => (
         <form onSubmit={props.handleSubmit}>
           <FormError
-            {...props}
             render={error => <div className="error">{error}</div>}
           />
 

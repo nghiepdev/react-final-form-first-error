@@ -1,10 +1,10 @@
 {
   "name": "react-final-form-first-error",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "A plugin get the first error for 🏁 React Final Form",
   "keywords": [
-    "pagination",
-    "paginate"
+    "react-final",
+    "react-final-form"
   ],
   "main": "bundle.js",
   "files": [
@@ -25,7 +25,8 @@
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">=16.8",
+    "react-final-form": ">=5"
   },
   "repository": {
     "type": "git",

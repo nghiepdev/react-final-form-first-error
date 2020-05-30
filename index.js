@@ -1,5 +1,5 @@
-import React, {useMemo} from 'react';
-import PropTypes from 'prop-types';
+import {useMemo} from 'react';
+import {useFormState} from 'react-final-form';
 
 // Inspired by https://github.com/streamich/react-use/blob/master/src/createMemo.ts
 export const createMemo = (fn) => (...args) => useMemo(() => fn(...args), args);
@@ -12,14 +12,8 @@ export const useFirstError = createMemo((errors, modified, submitFailed) => {
   }
 });
 
-export const FormError = ({
-  errors,
-  modified,
-  submitError,
-  submitFailed,
-  children,
-  render,
-}) => {
+export const FormError = ({children, render}) => {
+  const {errors, submitError, modified, submitFailed} = useFormState();
   const firstError = useFirstError(errors, modified, submitFailed);
 
   const error = useMemo(() => {
@@ -35,13 +29,4 @@ export const FormError = ({
   }
 
   return error;
-};
-
-FormError.propTypes = {
-  errors: PropTypes.object.isRequired,
-  modified: PropTypes.object.isRequired,
-  submitFailed: PropTypes.bool.isRequired,
-  submitError: PropTypes.string,
-  children: PropTypes.func,
-  render: PropTypes.func,
 };
