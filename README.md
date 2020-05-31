@@ -17,7 +17,7 @@ Example: https://codesandbox.io/s/react-final-from-first-error-my39h?file=/index
 
 ```jsx
 import {Form, Field} from 'react-final-form';
-import {FormError, useFirstError} from 'react-final-form-first-error';
+import FormError,{ useFirstError} from 'react-final-form-first-error';
 
 const LoginForm = (props) => {
   return (

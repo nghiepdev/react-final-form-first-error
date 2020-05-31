@@ -7,6 +7,7 @@ module.exports = {
     file: 'bundle.js',
     format: 'umd',
     name: 'react-final-form-first-error',
+    exports: 'named',
     globals: {
       react: 'React',
       'react-final-form': 'react-final-form',

@@ -8,7 +8,6 @@
   ],
   "main": "bundle.js",
   "files": [
-    "example.css",
     "LICENCE",
     "README.md"
   ],
@@ -17,10 +16,10 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
-    "rollup": "^2.11.2",
+    "rollup": "^2.12.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },

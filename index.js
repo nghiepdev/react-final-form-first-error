@@ -12,7 +12,7 @@ export const useFirstError = createMemo((errors, modified, submitFailed) => {
   }
 });
 
-export const FormError = ({children, render}) => {
+const FormError = ({children, render}) => {
   const {errors, submitError, modified, submitFailed} = useFormState();
   const firstError = useFirstError(errors, modified, submitFailed);
 
@@ -30,3 +30,5 @@ export const FormError = ({children, render}) => {
 
   return error;
 };
+
+export default FormError;
