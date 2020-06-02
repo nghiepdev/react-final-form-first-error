@@ -1,6 +1,6 @@
 {
   "name": "react-final-form-first-error",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A plugin get the first error for 🏁 React Final Form",
   "keywords": [
     "react-final",
