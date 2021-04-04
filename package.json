@@ -3,25 +3,21 @@
   "version": "0.2.1",
   "description": "A plugin get the first error for 🏁 React Final Form",
   "keywords": [
-    "react-final",
     "react-final-form"
   ],
-  "main": "bundle.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "LICENCE",
-    "README.md"
+    "dist"
   ],
   "scripts": {
-    "build": "rollup -c --environment BUILD:production",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
-    "rollup": "^2.12.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "@types/react": "^17.0.3",
+    "final-form": "^4.20.2",
+    "react-final-form": "^6.5.3"
   },
   "peerDependencies": {
     "react": ">=16.8",

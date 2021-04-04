@@ -15,9 +15,9 @@ yarn add react-final-form-first-error
 
 Example: https://codesandbox.io/s/react-final-from-first-error-my39h?file=/index.js
 
-```jsx
+```tsx
 import {Form, Field} from 'react-final-form';
-import FormError,{ useFirstError} from 'react-final-form-first-error';
+import {FormError, useFirstError} from 'react-final-form-first-error';
 
 const LoginForm = (props) => {
   return (
@@ -62,4 +62,4 @@ const LoginForm = (props) => {
 
 ## License
 
-MIT © [Nghiep](https://nghiepit.dev)
+MIT
